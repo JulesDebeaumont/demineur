@@ -46,7 +46,6 @@ function clickCell(indexRow: number, indexCol: number) {
       alert("You won !");
       return;
     }
-    revealAroundCell(indexRow, indexCol);
   }
 }
 function setCell(
@@ -108,6 +107,7 @@ function setBombAroundCount(indexRow: number, indexCol: number) {
 
   if (count === 0) {
     clickCell(indexRow, indexCol);
+    revealAroundCell(indexRow, indexCol);
     return;
   }
   setCell(indexRow, indexCol, String(count));
